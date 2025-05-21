@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE = 'sanjay188/devopsfinal'
         DOCKER_TAG = "${BUILD_NUMBER}"
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        NODE_VERSION = '18.x'  
+        NODE_VERSION = '23.3.0'  
     }
     
     stages {
