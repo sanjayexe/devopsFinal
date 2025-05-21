@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service  # A valid metadata name
+  labels:
+    app: test
+spec:
+  selector:
+    app: test
+  ports:
+    - name: http
+      port: 80         # Service port (external)
+      targetPort: 80   # Container port
+      protocol: TCP
+  type: LoadBalancer  # Correct type for external access
